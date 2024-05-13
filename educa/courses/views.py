@@ -12,6 +12,7 @@ from .models import Course, Module, Content, Subject
 from .forms import ModuleFormSet
 from braces.views import CsrfExemptMixin, JsonRequestResponseMixin
 from students.forms import CourseEnrollForm
+from django.core.cache import cache
 
 
 class ManageCourseListView(ListView):
@@ -169,7 +170,9 @@ class CourseListView(TemplateResponseMixin, View):
     template_name = "courses/course/list.html"
 
     def get(self, request, subject=None):
-        subjects = Subject.objects.annotate(total_courses=Count("courses"))
+        subjects = cache.get("all_subjects")
+        if not subjects:
+            subjects = Subject.objects.annotate(total_courses=Count("courses"))
         courses = Course.objects.annotate(total_modules=Count("modules"))
         if subject:
             subject = get_object_or_404(Subject, slug=subject)
