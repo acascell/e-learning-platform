@@ -173,6 +173,8 @@ class CourseListView(TemplateResponseMixin, View):
         subjects = cache.get("all_subjects")
         if not subjects:
             subjects = Subject.objects.annotate(total_courses=Count("courses"))
+            cache.set("all_subjects", subjects)
+
         courses = Course.objects.annotate(total_modules=Count("modules"))
         if subject:
             subject = get_object_or_404(Subject, slug=subject)
