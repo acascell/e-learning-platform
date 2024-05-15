@@ -1,5 +1,12 @@
 services:
 
+
+  cache:
+    image: redis:7.0.4
+    restart: always
+    volumes:
+      - ./data/cache:/data
+
   db:
     image: postgres:14.5
     restart: always
@@ -26,3 +33,4 @@ services:
       - POSTGRES_PASSWORD=postgres
     depends_on:
       - db
+      - cache
