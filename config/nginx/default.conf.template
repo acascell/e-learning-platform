@@ -10,7 +10,7 @@ upstream daphne {
 
 server {
     listen 80;
-    server_name www.e-learning-acascell.com e-learning-acascell.com;
+    server_name *.e-learning-acascell.com e-learning-acascell.com;
     return 301 https://$host$request_uri;
 }
 
@@ -18,7 +18,7 @@ server {
     listen               443 ssl;
     ssl_certificate      /code/educa/ssl/educa.crt;
     ssl_certificate_key  /code/educa/ssl/educa.key;
-    server_name www.e-learning-acascell.com e-learning-acascell.com;
+    server_name *.e-learning-acascell.com e-learning-acascell.com;
     error_log    stderr warn;
     access_log   /dev/stdout main;
 

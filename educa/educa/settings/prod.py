@@ -8,7 +8,7 @@ ADMINS = [
     ("Antonio Cascella", "infocascella@gmail.com"),
 ]
 
-ALLOWED_HOSTS = ["e-learning-acascell.com", "www.e-learning-acascell.com"]
+ALLOWED_HOSTS = [".e-learning-acascell.com"]
 
 DATABASES = {
     "default": {
