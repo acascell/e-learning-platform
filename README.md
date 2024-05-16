@@ -12,6 +12,9 @@ ideas/concerns using a web-based chat system
 ![login-form.png](educa%2Feduca%2Fscreenshot%2Flogin-form.png)
 ![register-form.png](educa%2Feduca%2Fscreenshot%2Fregister-form.png)
 ![websocket-chat.png](educa%2Feduca%2Fscreenshot%2Fwebsocket-chat.png)
+![instructor-manage-content.png](educa%2Feduca%2Fscreenshot%2Finstructor-manage-content.png)
+![instructor-create-course.png](educa%2Feduca%2Fscreenshot%2Finstructor-create-course.png)
+![instructor-add-content.png](educa%2Feduca%2Fscreenshot%2Finstructor-add-content.png)
 
 ### 🏂 Architecture
 The following is a high-level overview of the actual infrastructure architecture, designed for production usage.
@@ -25,19 +28,13 @@ the actual backend logic taking requests matching urls and returning rendered te
 ![models.png](educa%2Feduca%2Fscreenshot%2Fmodels.png)
 
 ### ✨ Features
-- Front-end defined using simple html/css with fine-grained design including navbar/sub-bar, header, sidebar, 
-product detail, order info, form payment
-- Built product catalog (Drinks shop: tea,coffee,ginseng) based on predefined models product and category.
-- Catalogue view defined using function based views and django template rendering offering a clear and concise 
-catalogue space
-- Built shopping cart allowing users to store and buy products including actions/methods such: "add" "remove"
-"save" "get total price" "clear". Utilised django session framework as middleware to store cart data
-- Registered application to the admin interface to easily allow users for simple interaction with the model flow
-- Defined asynch tasks using celery and rabbitmq to process and store orders
-- Implemented stripe payment gateway to process payment data using credit card. Defined webhook to actually successfully flag models payment flag
-when the payment correctly completes
-- Defined coupon system to actually apply discounts to the products and have them discounted at the order level toward the stripe payment process
-- Defined recommendation engine using redis based on purchased products
+- Front-end defined using simple html/css. Implemented javascript calls to perform operation after DOM completion
+such as websocket instantiation/communication to support a real-time web-chatting system
+- Provided API endpoint to allow students to perform enrolling activities using a Django REST framework
+- Built CMS content structure based on model hierarchy having modules, subjects, and courses.
+Implemented various models to enhance instructor experience allowing to work with images/videos/text and upload new content
+- Built authentication view using a Django built-in authentication framework
+- Defined course structure using Mixins and class-based views performing course list,edit,delete.Add remove modules
 
 ## Urls router endpoint
 
