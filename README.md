@@ -52,9 +52,6 @@ ASGI interface to process asynchronous requests. Re-written django chat app to s
 - Deployed production ready environment using nginx, docker containers, ASGi daphne/uWSGI interface for synch/asynch processing,
 docker-compose as orchestrator, psql as database layer, redis as a caching system
 
-
-## Urls router endpoint
-
 ### 🚀 Technology Stack
 
 - python 3.9
