@@ -9,16 +9,6 @@ can register to the platform and enroll to courses. Instructors can add content 
 and provide multimedia content to each course. The platform enables students/instructor to exchange real-time
 ideas/concerns using a web-based chat system
 
-![course-modules.png](educa%2Feduca%2Fscreenshot%2Fcourse-modules.png)
-![admin-modules-content-definition.png](educa%2Feduca%2Fscreenshot%2Fadmin-modules-content-definition.png)
-![course-enroll.png](educa%2Feduca%2Fscreenshot%2Fcourse-enroll.png)
-![login-form.png](educa%2Feduca%2Fscreenshot%2Flogin-form.png)
-![register-form.png](educa%2Feduca%2Fscreenshot%2Fregister-form.png)
-![websocket-chat.png](educa%2Feduca%2Fscreenshot%2Fwebsocket-chat.png)
-![instructor-manage-content.png](educa%2Feduca%2Fscreenshot%2Finstructor-manage-content.png)
-![instructor-create-course.png](educa%2Feduca%2Fscreenshot%2Finstructor-create-course.png)
-![instructor-add-content.png](educa%2Feduca%2Fscreenshot%2Finstructor-add-content.png)
-
 ### 🏂 Architecture
 
 The following is a high-level overview of the actual infrastructure architecture, designed for production usage.
@@ -68,6 +58,19 @@ docker-compose as orchestrator, psql as database layer, redis as a caching syste
 - uWSGi
 - REST framework 
 - Nginx Reverse proxy with SSL termination
+
+### 🤡 Demo
+
+
+![course-modules.png](educa%2Feduca%2Fscreenshot%2Fcourse-modules.png)
+![admin-modules-content-definition.png](educa%2Feduca%2Fscreenshot%2Fadmin-modules-content-definition.png)
+![course-enroll.png](educa%2Feduca%2Fscreenshot%2Fcourse-enroll.png)
+![login-form.png](educa%2Feduca%2Fscreenshot%2Flogin-form.png)
+![register-form.png](educa%2Feduca%2Fscreenshot%2Fregister-form.png)
+![websocket-chat.png](educa%2Feduca%2Fscreenshot%2Fwebsocket-chat.png)
+![instructor-manage-content.png](educa%2Feduca%2Fscreenshot%2Finstructor-manage-content.png)
+![instructor-create-course.png](educa%2Feduca%2Fscreenshot%2Finstructor-create-course.png)
+![instructor-add-content.png](educa%2Feduca%2Fscreenshot%2Finstructor-add-content.png)
 
 ### 🔎 TODO
 
